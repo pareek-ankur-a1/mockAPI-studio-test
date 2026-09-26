@@ -95,6 +95,6 @@ for (const [name, path] of [['resource', `/api/internal/resources/${resourceId}`
 
 test('cache hits still consume the shared mock read limit', async (t) => {
   const { request } = await setup(t);
-  for (let i = 0; i < 200; i++) assert.equal((await request(endpoint)).status, 200);
+  for (let i = 0; i < 100; i++) assert.equal((await request(endpoint)).status, 200);
   assert.equal((await request(endpoint)).status, 429);
 });

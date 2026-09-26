@@ -27,7 +27,7 @@ MockAPI Studio lets frontend developers build and test their apps **without wait
 | **Monaco Editor** | Schema input with syntax highlighting and JSON autocomplete |
 | **Multi-tenant Auth** | JWT + email OTP verification — each user only sees their own projects |
 | **Open CORS on Mock Routes** | Call from any domain — your `localhost:3000`, staging, anywhere |
-| **Rate Limiting** | 200 reads/min, 60 writes/min per IP — prevents abuse |
+| **Rate Limiting** | 100 reads/min, 60 writes/min per IP — prevents abuse |
 | **Redis** | Shared rate limits across servers and invalidated mock GET caches |
 
 ---
@@ -363,7 +363,7 @@ Rate limits use Redis when configured, with separate counters for each policy:
 
 | Operation | Limit | Key |
 |-----------|-------|-----|
-| Mock GET | 200/minute | IP |
+| Mock GET | 100/minute | IP |
 | Mock POST/PUT/DELETE | 60/minute | IP |
 | Login | 20/15 minutes | IP |
 | Registration | 5/15 minutes | IP |

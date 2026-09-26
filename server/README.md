@@ -562,7 +562,7 @@ In `development` mode the error response includes `stack` for debugging. In prod
 
 | Limiter | Applied to | Max | Window |
 |---------|-----------|-----|--------|
-| `mockReadLimiter` | GET /api/mock/* | 200 | 1 minute |
+| `mockReadLimiter` | GET /api/mock/* | 100 | 1 minute |
 | `mockWriteLimiter` | POST/PUT/DELETE /api/mock/* | 60 | 1 minute |
 | `otpVerifyLimiter` | POST /api/auth/verify-email | 10 | 15 minutes |
 | `otpResendLimiter` | POST /api/auth/resend-otp | 3 | 15 minutes |

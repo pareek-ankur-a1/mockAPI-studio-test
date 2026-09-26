@@ -4,7 +4,7 @@ import { redisUnavailable } from '../config/redis.js';
 
 const MINUTE = 60_000;
 const policies = {
-  mockRead: { windowMs: MINUTE, max: 200 },
+  mockRead: { windowMs: MINUTE, max: 100 },
   mockWrite: { windowMs: MINUTE, max: 60 },
   login: { windowMs: 15 * MINUTE, max: 20 },
   register: { windowMs: 15 * MINUTE, max: 5 },

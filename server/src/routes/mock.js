@@ -76,7 +76,7 @@ mockRouter.options('*', openCors); // Explicitly handle pre-flight OPTIONS for a
  * Returns all mock records for the resource (paginated, newest first).
  * Query params: ?limit=N &page=N &seeded=true|false
  *
- * Rate limit: 200 req/min per IP (read limiter — lenient)
+ * Rate limit: 100 req/min per IP (read limiter)
  */
 mockRouter.get(
   '/:projectPrefix/:resourceName',
@@ -90,7 +90,7 @@ mockRouter.get(
  * Returns a single mock record by MongoDB ObjectId.
  * Returns 404 if the id doesn't belong to this resource (scoping guard).
  *
- * Rate limit: 200 req/min per IP (read limiter)
+ * Rate limit: 100 req/min per IP (read limiter)
  */
 mockRouter.get(
   '/:projectPrefix/:resourceName/:id',
