@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  /* Use plain CSS for code elements to avoid circular @apply dependency */
+  code, pre {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  }
+}
+
+@layer components {
+  /* Reusable scrollbar style for response preview boxes */
+  .custom-scrollbar::-webkit-scrollbar       { @apply w-1.5; }
+  .custom-scrollbar::-webkit-scrollbar-track { @apply bg-transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb { @apply bg-gray-400; }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "mock-api-server",
+  "version": "1.0.0",
+  "description": "Dynamic API Mocking Service — Backend",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5",
+    "rate-limit-redis": "^4.3.1",
+    "redis": "^5.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
